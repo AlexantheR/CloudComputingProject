@@ -12,15 +12,6 @@ export const getServerSideProps: GetServerSideProps<
 > = async () => {
   try {
     await clientPromise;
-    // `await clientPromise` will use the default database passed in the MONGODB_URI
-    // However you can use another database (e.g. myDatabase) by replacing the `await clientPromise` with the following code:
-    //
-    // `const client = await clientPromise`
-    // `const db = client.db("myDatabase")`
-    //
-    // Then you can execute queries against your database like so:
-    // db.find({}) or any of the MongoDB Node Driver commands
-
     return {
       props: { isConnected: true },
     };
@@ -42,7 +33,7 @@ export default function Home({
     title: "",
     author: "",
     genre: "",
-    numPages: ""
+    price: ""
   });
 
 
@@ -50,7 +41,7 @@ export default function Home({
     title: "",
     author: "",
     genre: "",
-    numPages: ""
+    price: ""
   });
 
   const handleChange = (e: any) => {
@@ -77,7 +68,7 @@ export default function Home({
         const data = await response.json();
         console.log("New book added:", data);
         setBooks([...books, data]);
-        setFormData({ title: "", author: "", genre: "", numPages: "" });
+        setFormData({ title: "", author: "", genre: "", price: "" });
         fetchBooks();
       } else {
         console.error("Failed to add book");
@@ -90,7 +81,7 @@ export default function Home({
   const handleDelete = async (id: string) => {
     const isConfirmed = window.confirm('Are you sure you want to delete this book?');
     if (!isConfirmed) {
-      return; // Do nothing if the user cancels
+      return;
     }
 
     try {
@@ -111,14 +102,13 @@ export default function Home({
 
   const handleUpdate = (id: string) => {
     setEditingBookId(id);
-    // Retrieve the book data corresponding to the id and set it in updatedBookData state
     const bookToUpdate = books.find(book => book._id === id);
     if (bookToUpdate) {
       setUpdatedBookData({
         title: bookToUpdate.title,
         author: bookToUpdate.author,
         genre: bookToUpdate.genre,
-        numPages: bookToUpdate.numPages
+        price: bookToUpdate.price
       });
     }
   };
@@ -134,7 +124,7 @@ export default function Home({
   const handleSave = async (id: string) => {
     try {
       const response = await fetch(`/api/list?id=${id}`, {
-        method: "PUT", // or "PATCH" depending on your API
+        method: "PUT",
         headers: {
           "Content-Type": "application/json"
         },
@@ -144,7 +134,7 @@ export default function Home({
       if (response.ok) {
         console.log("Book updated successfully");
         fetchBooks();
-        setEditingBookId(null); // Reset editing mode
+        setEditingBookId(null); 
       } else {
         console.error("Failed to update book");
       }
@@ -154,15 +144,14 @@ export default function Home({
   };
 
   const handleCancel = () => {
-    setEditingBookId(null); // Exit editing mode
-    // Reset updatedBookData to original book data
+    setEditingBookId(null);
     const originalBookData = books.find(book => book._id === editingBookId);
     if (originalBookData) {
       setUpdatedBookData({
         title: originalBookData.title,
         author: originalBookData.author,
         genre: originalBookData.genre,
-        numPages: originalBookData.numPages
+        price: originalBookData.price
       });
     }
   };
@@ -234,10 +223,10 @@ export default function Home({
             />
             <input
               type="number"
-              name="numPages"
-              value={formData.numPages}
+              name="price"
+              value={formData.price}
               onChange={handleChange}
-              placeholder="Number of pages"
+              placeholder="Price"
               required
               min="1" // Minimum value
               title="Please enter a valid number"
@@ -285,8 +274,8 @@ export default function Home({
                   />
                   <input
                     type="number"
-                    name="numPages"
-                    value={updatedBookData.numPages}
+                    name="price"
+                    value={updatedBookData.price}
                     onChange={handleInputChange}
                     placeholder="Number of pages"
                     required
@@ -301,7 +290,7 @@ export default function Home({
                   <h2>{book.title}</h2>
                   <p>{book.author}</p>
                   <p>{book.genre}</p>
-                  <p>{book.numPages}</p>
+                  <p>{book.price}</p>
                   <button style={{ marginRight: '0.5rem' }} onClick={() => handleUpdate(book._id)}>Update</button>
                   <button onClick={() => handleDelete(book._id)}>Delete</button>
                 </>
