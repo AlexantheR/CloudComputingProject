@@ -56,21 +56,22 @@ Exemplu DELETE API:
 ![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/c63e288a-2eb2-4dc5-bf80-cfc476e88dce)
 
 # 5.Capturi ecran aplicație 
-![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/fabef56f-98fc-4c64-b5b7-a37802dee85d)
 
 Figura 1 – Homepage
-![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/c137a813-c767-4a94-9bc9-3412a6708787)
+![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/fabef56f-98fc-4c64-b5b7-a37802dee85d)
 
 Figura 2 – Homepage + Book Update
-![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/564ba16a-828f-432c-92aa-80ed26bbdbb9)
+![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/c137a813-c767-4a94-9bc9-3412a6708787)
 
 Figura 3 – Homepage + Delete + Confirmation
-![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/6fdd829c-0780-47df-a92d-395bc2231471)
+![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/564ba16a-828f-432c-92aa-80ed26bbdbb9)
 
 Figura 4 – MongoDB Atlas
-![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/87fce2c6-adc6-412b-976a-cab236159c9e)
+![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/6fdd829c-0780-47df-a92d-395bc2231471)
 
 Figura 5 – Vercel Project
+![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/87fce2c6-adc6-412b-976a-cab236159c9e)
+
 
 # 6.Referințe
 1. [MongoDB Documentation](https://www.mongodb.com/docs/)
