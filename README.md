@@ -1,4 +1,4 @@
-1. Introducere
+# 1. Introducere
 Documentatia aceasta are rolul de a prezenta tehnologiile utilizate pentru crearea proiectului. 
 Unul dintre principalele obiective ale acestui proiect era folosirea a cel putin 2 servicii in 
 cloud prin intermediul unui API REST. 
@@ -7,13 +7,13 @@ Astfel, am ales urmatoarele 2 servicii cloud:
 2. Vercel, acesta fiind folosit drept platforma de gazduire online a proiectului.
 • Link publicare proiect: [Bookstore Cloud Computing Project]([url](https://proiect-b4u554uzo-alexanthers-projects.vercel.app/))
 
-2. Descrierea problemei
+# 2. Descrierea problemei
 Aceasta aplicatie a fost creata cu gandul de a facilita actiunile unei librarii, putand gestiona 
 stocul online. In aplicatie pot fi adaugate carti cu urmatoarele campuri: titlu, autor, gen si 
 pret. De asemenea, informatiile cartilor pot fi actualizate de catre utilizator sau chiar si sterse 
 din baza de date (de exemplu, pentru cazul in care o carte a fost cumparata de un client)
 
-4. Descriere API
+# 3. Descriere API
 API-uri utilizate in acest proiect au fost urmatoarele:
 1. GET: este utilizat pentru a returna o lista de carti din baza de date
 • Pentru acest API nu sunt necesari parametri
@@ -34,7 +34,7 @@ cartea din baza de date si va fi stearsa
 de date cartea ce va fi actualizata. Apoi, similar API-ului POST, vor fi folosite 
 titlul, autorul, genul si pretul, insa cu datele actualizate.
 
-4. Flux de date
+# 4. Flux de date
 Exemplu POST API:
 ![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/2e7c0875-abe5-42ef-b681-23c9002f3836)
 
@@ -44,7 +44,7 @@ Exemplu GET API:
 Exemplu DELETE API:
 ![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/c63e288a-2eb2-4dc5-bf80-cfc476e88dce)
 
-5.Capturi ecran aplicație 
+# 5.Capturi ecran aplicație 
 ![image](https://github.com/AlexantheR/CloudComputingProject/assets/74862164/fabef56f-98fc-4c64-b5b7-a37802dee85d)
 
 Figura 1 – Homepage
@@ -61,7 +61,7 @@ Figura 4 – MongoDB Atlas
 
 Figura 5 – Vercel Project
 
-6.Referințe
-1. [MongoDB Documentation]([url](https://www.mongodb.com/docs/))
-2. [Vercel Documentation]([url](https://vercel.com/docs))
-3. [Stackoverflow]([url](https://stackoverflow.com/questions/47656515/updateone-on-mongodb-not-working-in-node-js))
+# 6.Referințe
+1. [MongoDB Documentation]([https://www.mongodb.com/docs/]))
+2. [Vercel Documentation]([https://vercel.com/docs])
+3. [Stackoverflow]([https://stackoverflow.com/questions/47656515/updateone-on-mongodb-not-working-in-node-js])
